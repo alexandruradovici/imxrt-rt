@@ -61,7 +61,7 @@ SECTIONS
         *(.text .text.*);
         . = ALIGN(4);
         __etext = .;
-    } > ITCM AT> FLASH
+    } > FLASH
 
     .padding (NOLOAD) :
     {
@@ -77,7 +77,7 @@ SECTIONS
         *(.data .data.*);
         . = ALIGN(16);
         __edata = .;
-    } > DTCM AT> FLASH
+    } > DTCM 
 
     __sidata = LOADADDR(.data);
 
